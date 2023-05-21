@@ -18,13 +18,22 @@ function App(): JSX.Element {
   return (
     <SafeAreaView>
       <StatusBar/>
+      <View style={styles.container}>
       <Text>Testing is ok !</Text>
+      <Text>Testing is ok !</Text>
+      <Text>Testing is ok !</Text>
+      <Text>Testing is ok !</Text>
+      <Text>Testing is ok !</Text>
+      <Text>Testing is ok !</Text>
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
- 
+ container:{
+  alignItems:'center'
+ }
 });
 
 export default App;
