@@ -3,14 +3,12 @@ import type {PropsWithChildren} from 'react';
 import {
   ActivityIndicator,
   SafeAreaView,
-  ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
-  useColorScheme,
   View,
 } from 'react-native';
 import { setupPlayer,addTrack } from '../musicPlayerService';
+import MusicPlayer from './screens/MusicPlayer';
 
 function App(): JSX.Element {
   const [isPlayerReady, setIsPlayerReady] = useState(false)
@@ -36,17 +34,12 @@ function App(): JSX.Element {
         )
       }
   return (
-    <SafeAreaView>
-      <StatusBar/>
+
       <View style={styles.container}>
-      <Text>Testing is ok !</Text>
-      <Text>Testing is ok !</Text>
-      <Text>Testing is ok !</Text>
-      <Text>Testing is ok !</Text>
-      <Text>Testing is ok !</Text>
-      <Text>Testing is ok !</Text>
+      <StatusBar backgroundColor={'#001d23'}/>
+      <MusicPlayer/>
       </View>
-    </SafeAreaView>
+
   );
 }
 
