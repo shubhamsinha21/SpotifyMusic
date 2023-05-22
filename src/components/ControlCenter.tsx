@@ -35,7 +35,7 @@ const ControlCentre = () => {
         </Pressable>
         <Pressable onPress={ () => togglePlayback(playbackState)}>
             <Icon style={styles.icon}
-             name= {playbackState}
+             name = {playbackState === State.Playing ? 'pause' : 'play-arrow'}
              size={70} />
         </Pressable>
         <Pressable onPress={skipToNext}>
