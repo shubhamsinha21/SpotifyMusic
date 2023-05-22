@@ -2,7 +2,6 @@ import React from 'react'
 import {View, StyleSheet, Pressable} from 'react-native'
 import TrackPlayer, { State, usePlaybackState } from 'react-native-track-player'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import { playbackService } from '../../musicPlayerService'
 
 const ControlCentre = () => {
 
@@ -20,7 +19,7 @@ const ControlCentre = () => {
         const currentTrack = await TrackPlayer.getCurrentTrack()
 
         if (currentTrack !== null){
-            if (playback === State.Paused || playback === State.Playing){
+            if (playback === State.Paused || playback === State.Ready){
                 await TrackPlayer.play()
             }
             else{
@@ -34,7 +33,7 @@ const ControlCentre = () => {
             <Icon style={styles.icon} name='skip-previous' size={40} />
         </Pressable>
         <Pressable onPress={ () => togglePlayback(playbackState)}>
-            <Icon style={styles.icon}
+            <Icon style={[styles.icon,styles.playButton]}
              name = {playbackState === State.Playing ? 'pause' : 'play-arrow'}
              size={70} />
         </Pressable>
@@ -47,10 +46,16 @@ const ControlCentre = () => {
 
 const styles = StyleSheet.create({
     container:{
-
+        marginBottom:56,
+        flex:1,
+        flexDirection:'row',
+        alignItems:'center'
     },
     icon:{
-
-    }
+        color:'#FFFFFF'
+    },
+    playButton: {
+        marginHorizontal: 24,
+      },
 })
 export default ControlCentre;

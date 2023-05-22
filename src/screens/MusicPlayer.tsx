@@ -54,17 +54,24 @@ const MusicPlayer = () => {
 }
 
 const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:'#001d23'
+    },
     listArtWrapper:{
-
+        width:width,
+        justifyContent:'center',
+        alignItems:'center'
     },
     albumContainer:{
-
+        width:300,
+        height:300
     },
     albumArtImage:{
-
-    },
-    container:{
-
+        height:'100%',
+        borderRadius:4
     },
 
 
