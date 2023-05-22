@@ -10,10 +10,10 @@ export const playListData: Track[] = [
     },
     {
         id:2,
-        title:'Daku',
-        artist:'Inderpal',
-        album:'New Viral 2022',
-        artwork:'https://c.saavncdn.com/053/Daku-Punjabi-2020-20200903175833-500x500.jpg',
+        title:'Aathma Rama',
+        artist:'Brodha V',
+        album:'Punjabi Version',
+        artwork:'https://is3-ssl.mzstatic.com/image/thumb/Music116/v4/41/ef/0e/41ef0e30-1ab4-34e3-8695-ef330ed13bf5/artwork.jpg/1200x1200bf-60.jpg',
         url:require('./assets/two.mp3')
     },
     {
